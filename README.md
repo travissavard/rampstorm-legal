@@ -39,7 +39,7 @@ Open `index.html` directly from disk to preview it locally.
   `terms/index.html` whenever the substance changes, and mention important changes in the game's
   release notes.
 - **Storm launch dates.** The privacy policy and the terms written for the storm launch (version 1.0)
-  carry the effective date **27 September 2026**. If publication slips past that day, bump the date in
+  carry the effective date **26 September 2026**. If publication slips past that day, bump the date in
   both places on both pages (the "Effective date" line at the top and the footer) to the actual
   publication date before pushing.
 - **Keep the privacy policy and the Play Data safety form in step.** The data types in section 5 of the
