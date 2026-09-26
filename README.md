@@ -38,16 +38,25 @@ Open `index.html` directly from disk to preview it locally.
 - **Change the effective date** at the top and in the footer of `privacy/index.html` or
   `terms/index.html` whenever the substance changes, and mention important changes in the game's
   release notes.
-- **Keep the privacy policy and the Play Data safety form in step.** The data types in section 3 of the
+- **Storm launch dates.** The privacy policy and the terms written for the storm launch (version 1.0)
+  carry the effective date **27 September 2026**. If publication slips past that day, bump the date in
+  both places on both pages (the "Effective date" line at the top and the footer) to the actual
+  publication date before pushing.
+- **Keep the privacy policy and the Play Data safety form in step.** The data types in section 5 of the
   privacy policy (device or other IDs, approximate location, app interactions, crash logs,
   diagnostics) must match `docs/privacy/DATA_SAFETY_INVENTORY.md` and what is submitted in Play Console.
   If the game adds a backend, accounts, cloud save, analytics, leaderboards or another SDK, or changes
   the ads SDK version, update both before that version is released.
+- **Ghost Races and LiveOps.** Section 8 of the privacy policy says Ghost Races are switched off, and
+  section 3 lists every network use. Before `ghost_races/enabled`, `ghost_races/privacy_ready` or
+  `liveops/enabled` is set to `true` in any build that reaches a Play track, apply
+  `docs/privacy/GHOST_RACES_DELTA.md` (or the LiveOps note in `docs/privacy/DATA_SAFETY_INVENTORY.md`)
+  to these pages and publish them first.
 - **Update the licences page when dependencies change.** Rebuild the Android app, list its contents
   (`unzip -l app.apk`, the `META-INF/*.version` files and the `*.properties` files at the APK root give
   library versions; `aapt2 dump badging app.apk` gives permissions) and add or remove entries.
   Licence texts are copied verbatim from the upstream `LICENSE` files at the shipped tag; copy them
-  again rather than editing them. The permissions table in section 6 of the privacy policy should
+  again rather than editing them. The permissions table in section 9 of the privacy policy should
   match the badging output.
 - **404 page.** `404.html` uses inline CSS because GitHub Pages serves it at whatever path was missing.
 
