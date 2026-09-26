@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Licences - Rampstorm</title>
-<meta name="description" content="Open-source and third-party notices for Rampstorm: Godot Engine, Fredoka, Godot plugins, Android libraries and Google SDKs.">
+<meta name="description" content="Open-source and third-party notices for Rampstorm: Godot Engine, Fredoka, Godot plugins, Android libraries, Google SDKs and the Unity Ads SDK.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -38,6 +38,8 @@
       <li><a href="#apache">Android and Kotlin libraries (Apache License 2.0)</a></li>
       <li><a href="#llvm">LLVM libc++</a></li>
       <li><a href="#google">Google SDKs (Google licence terms)</a></li>
+      <li><a href="#unity-ads">Unity Ads SDK (Unity licence terms)</a></li>
+      <li><a href="#bsd">Protocol Buffers and the Cronet API (BSD licences)</a></li>
       <li><a href="#apache-text">Apache License 2.0 full text</a></li>
       <li><a href="#inter">Inter font</a></li>
     </ol>
@@ -263,7 +265,7 @@ SOFTWARE.</pre>
       <table>
         <thead><tr><th scope="col">Library</th><th scope="col">Version</th></tr></thead>
         <tbody>
-          <tr><td><code>androidx.activity:activity</code></td><td>1.8.1</td></tr>
+          <tr><td><code>androidx.activity:activity, activity-ktx</code></td><td>1.8.1</td></tr>
           <tr><td><code>androidx.annotation:annotation-experimental</code></td><td>1.4.1</td></tr>
           <tr><td><code>androidx.appcompat:appcompat, appcompat-resources</code></td><td>1.7.1</td></tr>
           <tr><td><code>androidx.arch.core:core-runtime</code></td><td>version not recorded in the build</td></tr>
@@ -278,12 +280,12 @@ SOFTWARE.</pre>
           <tr><td><code>androidx.emoji2:emoji2, emoji2-views-helper</code></td><td>1.3.0</td></tr>
           <tr><td><code>androidx.fragment:fragment</code></td><td>1.8.6</td></tr>
           <tr><td><code>androidx.interpolator:interpolator</code></td><td>1.0.0</td></tr>
-          <tr><td><code>androidx.lifecycle (livedata, livedata-core, livedata-core-ktx, process, runtime, service, viewmodel, viewmodel-savedstate)</code></td><td>2.8.3</td></tr>
+          <tr><td><code>androidx.lifecycle (livedata, livedata-core, livedata-core-ktx, process, runtime, runtime-ktx, service, viewmodel, viewmodel-ktx, viewmodel-savedstate)</code></td><td>2.8.3</td></tr>
           <tr><td><code>androidx.loader:loader</code></td><td>1.0.0</td></tr>
           <tr><td><code>androidx.privacysandbox.ads:ads-adservices, ads-adservices-java</code></td><td>1.0.0-beta05</td></tr>
           <tr><td><code>androidx.profileinstaller:profileinstaller</code></td><td>1.3.1</td></tr>
           <tr><td><code>androidx.room:room-runtime</code></td><td>2.2.5</td></tr>
-          <tr><td><code>androidx.savedstate:savedstate</code></td><td>1.2.1</td></tr>
+          <tr><td><code>androidx.savedstate:savedstate, savedstate-ktx</code></td><td>1.2.1</td></tr>
           <tr><td><code>androidx.sqlite:sqlite, sqlite-framework</code></td><td>2.1.0</td></tr>
           <tr><td><code>androidx.startup:startup-runtime</code></td><td>1.1.1</td></tr>
           <tr><td><code>androidx.tracing:tracing</code></td><td>1.2.0</td></tr>
@@ -291,7 +293,7 @@ SOFTWARE.</pre>
           <tr><td><code>androidx.versionedparcelable:versionedparcelable</code></td><td>1.1.1</td></tr>
           <tr><td><code>androidx.viewpager:viewpager</code></td><td>1.0.0</td></tr>
           <tr><td><code>androidx.webkit:webkit</code></td><td>1.12.1</td></tr>
-          <tr><td><code>androidx.work:work-runtime</code></td><td>2.7.0</td></tr>
+          <tr><td><code>androidx.work:work-runtime, work-runtime-ktx</code></td><td>2.7.0</td></tr>
         </tbody>
       </table>
     </div>
@@ -301,6 +303,12 @@ SOFTWARE.</pre>
 
     <h3>kotlinx.coroutines (core, android) 1.8.0</h3>
     <p>Copyright JetBrains s.r.o. and contributors. Source: <a href="https://github.com/Kotlin/kotlinx.coroutines">https://github.com/Kotlin/kotlinx.coroutines</a></p>
+
+    <h3>Google Mobile Ads mediation adapter for Unity Ads 4.16.3.0</h3>
+    <p><code>com.google.ads.mediation:unity</code> 4.16.3.0 connects the Google Mobile Ads SDK to the Unity Ads SDK (<a href="#unity-ads">section 8</a>) so that AdMob mediation can fill rewarded ads from Unity Ads. It does not contain the Unity Ads SDK. Copyright Google LLC. Licensed under the Apache License, Version 2.0, as declared in the adapter's Maven package. Source and licence: <a href="https://github.com/googleads/googleads-mobile-android-mediation">https://github.com/googleads/googleads-mobile-android-mediation</a> (<a href="https://github.com/googleads/googleads-mobile-android-mediation/blob/main/LICENSE">LICENSE</a>)</p>
+
+    <h3>OkHttp 3.12.13 and Okio 1.15.0</h3>
+    <p>Included by the Unity Ads SDK: <code>com.squareup.okhttp3:okhttp</code> 3.12.13 and <code>com.squareup.okio:okio</code> 1.15.0. Copyright Square, Inc. Source: <a href="https://github.com/square/okhttp">https://github.com/square/okhttp</a> and <a href="https://github.com/square/okio">https://github.com/square/okio</a></p>
 
     <h3>Firebase encoders and Google data transport</h3>
     <p>Included by the Google Mobile Ads SDK: <code>com.google.firebase:firebase-encoders</code> 17.0.0, <code>firebase-encoders-json</code> 18.0.0, <code>firebase-encoders-proto</code> 16.0.0, <code>com.google.android.datatransport:transport-api</code> 3.0.0, <code>transport-runtime</code> 3.1.8 and <code>transport-backend-cct</code> 3.1.8. Copyright Google LLC. Source: <a href="https://github.com/firebase/firebase-android-sdk">https://github.com/firebase/firebase-android-sdk</a></p>
@@ -331,13 +339,112 @@ SOFTWARE.</pre>
           <tr><td>Google Play services: base, basement, tasks</td><td><code>com.google.android.gms:play-services-base, play-services-basement, play-services-tasks</code></td><td>18.5.0, 18.9.0, 18.2.0</td></tr>
           <tr><td>Google Play services: location, places place-report (included by the ads SDK; the game requests no location permission)</td><td><code>com.google.android.gms:play-services-location, play-services-places-placereport</code></td><td>19.0.0, 17.0.0</td></tr>
           <tr><td>Google Play services: measurement base and API (included by the ads SDK)</td><td><code>com.google.android.gms:play-services-measurement-base, play-services-measurement-sdk-api</code></td><td>20.1.2</td></tr>
+          <tr><td>Google Play services: Cronet loader (included by the Unity Ads SDK)</td><td><code>com.google.android.gms:play-services-cronet</code></td><td>18.0.1</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
+  <section class="component" id="unity-ads">
+    <h2>8. Unity Ads SDK (Unity licence terms)</h2>
+    <dl class="facts">
+      <dt>What</dt><dd>The Unity Ads SDK for Android, <code>com.unity3d.ads:unity-ads</code> 4.16.2, included so that Google AdMob mediation can fill rewarded ads from Unity Ads. It is started by AdMob's Unity adapter (<a href="#apache">section 5</a>), not by the game itself</dd>
+      <dt>Licence</dt><dd>Not open source. Unity Technologies distributes it under the Unity Ads License, the Unity Monetization Services Terms of Service: <a href="https://unity3d.com/legal/monetization-services-terms-of-service">https://unity3d.com/legal/monetization-services-terms-of-service</a> (the licence named in the SDK's Maven package)</dd>
+      <dt>Copyright</dt><dd>Copyright Unity Technologies</dd>
+      <dt>Source and releases</dt><dd><a href="https://github.com/Unity-Technologies/unity-ads-android">https://github.com/Unity-Technologies/unity-ads-android</a></dd>
+      <dt>Data</dt><dd>How Unity handles data when it supplies an ad is explained in our <a href="../privacy/index.html">privacy policy</a> and in the Unity Game Player and App User Privacy Policy: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">https://unity.com/legal/game-player-and-app-user-privacy-policy</a></dd>
+    </dl>
+    <p>The Unity Ads SDK brings in the open-source libraries listed in <a href="#apache">section 5</a> (OkHttp, Okio and the Kotlin extensions of AndroidX) and <a href="#bsd">section 9</a> (Protocol Buffers and the Cronet API), and Google's Cronet loader listed in <a href="#google">section 7</a>.</p>
+  </section>
+
+  <section class="component" id="bsd">
+    <h2>9. Protocol Buffers and the Cronet API (BSD licences)</h2>
+    <p>Both are included by the Unity Ads SDK.</p>
+
+    <h3>Protocol Buffers (lite runtime) 3.25.6</h3>
+    <dl class="facts">
+      <dt>Libraries</dt><dd><code>com.google.protobuf:protobuf-javalite, protobuf-kotlin-lite</code> 3.25.6</dd>
+      <dt>Licence</dt><dd>BSD 3-Clause License</dd>
+      <dt>Copyright</dt><dd>Copyright 2008 Google Inc. All rights reserved.</dd>
+      <dt>Source</dt><dd><a href="https://github.com/protocolbuffers/protobuf">https://github.com/protocolbuffers/protobuf</a></dd>
+    </dl>
+    <details>
+      <summary>Protocol Buffers licence text</summary>
+      <pre class="license">Copyright 2008 Google Inc.  All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+    * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+&quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Code generated by the Protocol Buffer compiler is owned by the owner
+of the input file used when generating it.  This code is not
+standalone and requires a support library to be linked with it.  This
+support library is itself covered by the above license.</pre>
+    </details>
+
+    <h3>Cronet API 72.3626.96 (Chromium)</h3>
+    <dl class="facts">
+      <dt>Library</dt><dd><code>org.chromium.net:cronet-api</code> 72.3626.96, the programming interface of Chromium's network stack (the network stack itself comes from Google Play services on the device)</dd>
+      <dt>Licence</dt><dd>BSD 3-Clause License (Chromium). Licence of Chromium and its built-in dependencies, as named in the library's Maven package: <a href="https://storage.cloud.google.com/chromium-cronet/android/72.0.3626.96/Release/cronet/LICENSE">https://storage.cloud.google.com/chromium-cronet/android/72.0.3626.96/Release/cronet/LICENSE</a></dd>
+      <dt>Copyright</dt><dd>Copyright 2015 The Chromium Authors. All rights reserved.</dd>
+      <dt>Source</dt><dd><a href="https://chromium.googlesource.com/chromium/src/+/main/components/cronet/">https://chromium.googlesource.com/chromium/src/+/main/components/cronet/</a></dd>
+    </dl>
+    <details>
+      <summary>Chromium licence text</summary>
+      <pre class="license">Copyright 2015 The Chromium Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+    * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+&quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
+    </details>
+  </section>
+
   <section class="component" id="apache-text">
-    <h2>8. Apache License 2.0 full text</h2>
+    <h2>10. Apache License 2.0 full text</h2>
     <details>
       <summary>Apache License, Version 2.0</summary>
       <pre class="license">                                 Apache License
@@ -545,7 +652,7 @@ SOFTWARE.</pre>
   </section>
 
   <section class="component" id="inter">
-    <h2>9. Inter font</h2>
+    <h2>11. Inter font</h2>
     <dl class="facts">
       <dt>Used for</dt><dd>Menu and body text in the game</dd>
       <dt>Licence</dt><dd>SIL Open Font License, Version 1.1</dd>
@@ -654,7 +761,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.</pre>
 </main>
 
 <footer class="site-footer wrap">
-  <p>&copy; 2026 ProductSeal. Notices last reviewed 13 September 2026.</p>
+  <p>&copy; 2026 ProductSeal. Notices last reviewed 26 September 2026.</p>
   <p><a href="../index.html">Home</a> &middot; <a href="../privacy/index.html">Privacy</a> &middot; <a href="../terms/index.html">Terms</a> &middot; <a href="../support/index.html">Support</a> &middot; <a href="mailto:dev@productseal.com">dev@productseal.com</a></p>
 </footer>
 </body>
